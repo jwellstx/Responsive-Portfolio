@@ -151,6 +151,13 @@ input[type=submit] { /* Email input */
     width: 100%;
 }
 
+
+/* changing a lot of the width/margin/padding to be percentages because
+   i've realized hardcoding px size is a nightmare.  This is also 
+   beneficial to responsiveness. 
+   
+   Also anthing larger than 980 is not responsive at all.
+   */
 @media screen and (max-width: 980px) {
     .name {
         margin-left: 10%;
@@ -205,8 +212,7 @@ input[type=submit] { /* Email input */
     }
 
     .column1text {
-        /* !! this seems like awful way of doing it !! */
-        /* lesson learned.. write better html */
+        /* !! this seems like an awful way of doing it and is messy !! */
         position: relative;
         top: 140px;
         left: -185px;
