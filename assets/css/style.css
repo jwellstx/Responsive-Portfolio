@@ -1,0 +1,229 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    background-image: url('../images/ignasi_pattern_s.png');
+}
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #cccccc;
+    height: 75px;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+/* generic styling for each page */
+.name { /* My name styling */
+    margin-left: 200px;
+    background-color: #4aaaa5;
+    float: left;
+    height: 75px;
+    width: 200px;
+    text-align: center;
+    color: white;
+}
+
+.links { /* nav bar styling */
+    padding-top: 25px;
+    margin-left: 900px;
+    white-space: nowrap;
+    color: #928d8d; 
+    text-decoration: none;
+}
+
+header a { /* header for each page title styling */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header h2 { /* header for each page title styling */
+    padding-bottom: 30px;
+}
+
+.mainsection { /* main body for each section styling */
+    margin: 20px 200px 20px 200px;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 960px;
+    overflow: auto;
+    position: relative;
+}
+
+.mainsection img { /* aligning my imsage */
+    float: left; 
+    margin-right: 30px; 
+    margin-bottom: 30px;
+}
+
+footer { /* footer settings */
+    background-color: #666666;
+    border-top: 8px solid #4aaaa5;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    color: white;
+    clear: both;
+}
+
+
+/* Styling specifics for index.html */
+.aboutme { /* container settings for about me section */
+    color: #4aaaa5;
+    border-bottom: 2px solid #cccccc;
+    width: 960px;
+    padding-bottom: 15px;
+}
+
+.maintext p { /* line spacing and color for main text */
+    line-height: 30px;
+    color: #928d8d;
+}
+
+
+/* Styling specifics for portfolio.html */
+.p_container { /* push paragraphs for alignment */
+    margin-left: 200px;
+}
+
+.column1 { /* column 1 picture settings */
+    height: 250px;
+    float: left;
+}
+
+.column2 { /* column 2 picture settings */
+    height: 250px; 
+    overflow: auto;
+}
+
+.lastrow { /* fix picture overhang */
+    padding-bottom: 50px;
+}
+
+.column1text { /* Column 1 text and banner overlay */
+    position: relative;
+    bottom: 80px;
+    left: 16px;
+    color: white;
+    background-color: #4aaaa5;
+    margin-top: 215px;
+    margin-right:40px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+.column2text { /* Column 2 text and banner overlay */
+    position: relative;
+    background-color: #4aaaa5;
+    left: -185px;
+    margin-right: 340px;
+    margin-top: 135px;
+    margin-left: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+}
+
+/* Styling specifics for contact.html */
+input { /* Name input */
+    width: 100%;
+    height: 50px;
+    color: rgb(112, 109, 109);
+    padding-left: 20px;
+}
+
+input[type=submit] { /* Email input */
+    width: 15%;
+    font-size: 20;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding-left: 0;  /* reset padding */
+    background-color: #4aaaa5;
+    color: white;
+}
+
+.message { /* Message input */
+    padding-top: 20px;
+    padding-left: 20px;
+    height: 200px;
+    width: 100%;
+}
+
+@media screen and (max-width: 980px) {
+    .name {
+        margin-left: 10%;
+    }
+    header {
+        width: 100%;
+    }
+    .mainsection {
+        width: 75%;
+        margin-left: 10%;
+    }
+    .aboutme {
+        width: 100%;
+    }
+    .links {
+        margin-left: 60%;
+    }
+    .column2text {
+        margin-right: -70px;
+        width: 200px;
+    }
+    input[type=submit] {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* this acts the same as 980, so everything is inherited from above */
+}
+
+@media screen and (max-width: 640px) {
+    .name {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    header {
+        position: static;
+    }
+    .mainsection {
+        width: 82%;
+        margin-left: 5%;
+        padding-left: 5%;
+        margin-top: 50px;  /* give the links some breathing room */
+    }
+    .links {
+        margin-left: 30%;
+        white-space: normal;
+    }
+    .column1 {
+        float: none;
+    }
+
+    .column1text {
+        /* !! this seems like awful way of doing it !! */
+        /* lesson learned.. write better html */
+        position: relative;
+        top: 140px;
+        left: -185px;
+        color: white;
+        background-color: #4aaaa5;
+        margin-top: 0px;
+        margin-right: 40px;
+        margin-left: 200px;
+        padding-left: 0px;
+        padding-top: 10px;
+        width: 200px;
+    }
+
+    .column2text {
+        margin-right: 40px;
+        width: 200px;
+    }
+
+    
+} 
